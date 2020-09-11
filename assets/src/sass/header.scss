@@ -1,10 +1,74 @@
 header {
   background-color: rgba(0,0,0,.5);
+  height: 65px; 
+  .hamburguer-menu {
+    display: none;
+    width: 30px;
+    height: 30px;
+    background-image: url('../img/hamburguer-icon.svg');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    margin-left: 20px;
+    &:focus {
+      outline: none;
+      border: none;
+    }
+  }
   .navigation {
     width: 100vw;
-    height: 65px; 
+    height: 100%; 
     display: flex;
     justify-content: flex-end;
+    &__footer {
+      display: none;
+    }
+    &__user {
+      display: none;
+      position: relative;
+      .user {
+        &__wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          padding-top: 50px;
+          font-family: 'Crimson Text', serif;
+          figure {
+            margin: 0;
+            border: 1px solid  #e5d8a3;
+            border-radius: 90px;
+            width: 88px;
+            height: 88px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #e5d8a3;
+            img {
+                width: 100px;
+            }
+          }
+          .name {
+            font-size: 20px;
+            font-weight: 300;
+            text-transform: uppercase;
+            color: #e5d8a3;
+            margin: 5px 0;
+          }
+          .score {
+            font-size: 18px;
+            font-weight: normal;
+            text-transform: uppercase;
+            margin: 0;
+            letter-spacing: 2px;
+            line-height: 20px;
+            color: #e5d8a3;
+          }
+        }
+      }
+    }
     ul {
       display: flex;
       justify-content: space-between;
@@ -33,6 +97,111 @@ header {
           } 
         }
       }
+    }
+    .close-menu {
+      display: none;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: transparent;
+      border: none;
+      font-size: 0;
+      color: #fff5ce;
+      width: 30px;
+      height: 30px;
+      background-image: url('../img/close-icon.svg');
+      background-size: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      &:focus {
+        outline: none;
+        border: none;
+      }
+
+    }
+  }
+  @media(max-width: 720px) {
+    display: flex;
+    align-items: center;
+    .hamburguer-menu {
+      display: block;
+    }
+    .navigation {
+      position: fixed;
+      left: -500px;
+      top: 0;
+      width: 300px;
+      height: 100vh;
+      background-color: #1c120e;
+      z-index: 9;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 0;
+      overflow-y: auto;
+      transition: .3s;
+      .menu-open & {
+        left: 0;
+      }
+      .close-menu {
+        display: block;
+      }
+      &__footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%;
+        padding: 0 40px 40px 40px;
+        align-items: flex-start;
+        width: 100%;
+        a {
+          font-family: 'Crimson Text', serif;
+          font-size: 20px;
+          color: #d6ab7f;
+          text-decoration: none;
+        }
+      }
+      &__user {
+        display: block;
+      }
+      ul {
+        margin: 0;
+        margin-top: 50px;
+        flex-direction: column;
+        width: 100%;
+        li {
+          width: 100%;
+          height: 50px;
+          border-top: 1px solid #3f312c;
+          &:last-child {
+            border-bottom: 1px solid #3f312c;
+          }
+          a {
+            justify-content: flex-start;
+            padding: 0 40px;
+            color: #d6ab7f;
+          }
+        }
+      }
+    }
+  }
+}
+
+.mask-menu {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0,0,0,.4);
+  z-index: 8;
+  transition: .3s;
+  @media (max-width: 720px) {
+    .menu-open & {
+      opacity: 1;
+      visibility: visible;
     }
   }
 }
