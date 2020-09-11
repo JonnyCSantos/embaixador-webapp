@@ -1,0 +1,118 @@
+.missao {
+    .wrapper {
+        margin-top: 60px;
+    }
+    .left {
+        flex: 0 1 230px;
+        .user {
+            background-image: url('../img/escudo.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            min-height: 365px;
+            &__wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                padding-top: 50px;
+                font-family: 'Crimson Text', serif;
+                figure {
+                    img {
+                        max-width: 90px;
+                    }
+                }
+                .name {
+                    font-size: 22px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    color: #d6ab7f;
+                }
+                .score {
+                    font-size: 50px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    margin-top: 10px;
+                    letter-spacing: 2px;
+                    color: #d6ab7f;
+                }
+            }
+        }
+    }
+    .center {
+        flex: 0 1 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .recompensas {
+            background-image: url('../img/bg-painel-missao.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: 100%;
+            width: 100%;
+            &__wrapper {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-direction: column;
+                height: 100%;
+                padding-top: 40px;
+                max-height: 550px;
+            }
+            &__title {
+                font-family: 'Crimson Text', serif;
+                font-size: 22px;
+                font-weight: bold;
+                text-align: center;
+                color: #d6ab7f;
+                height: fit-content;
+                width: 100%;
+                padding: 0 40px;
+                h2 {
+                    margin-top: 0px;
+                }
+            }
+            &__main {
+                width: 100%;
+                padding: 0 40px;
+                max-height: 385px;
+                overflow-y: auto;
+                max-width: 450px;
+            }
+            &__list {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            &__item {
+                flex: 0 1 50%;
+                min-height: 190px;
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                max-width: 135px;
+                margin: 0 15px 30px 15px;
+                background-image: url('../img/pergaminho.png');
+                background-size: contain;
+                background-repeat: no-repeat;
+                figure {
+                    margin: 20px 15px 0 15px;
+                    height: 85px;
+                    background-color: #fff;
+                    border: 1px solid #b4b4b4;
+                }
+                p {
+                    font-size: 15px;
+                    color: #2d231f;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .right {
+        flex: 0 1 430px;
+        .unit-mobile {
+            display: block;
+        }
+    }
+}

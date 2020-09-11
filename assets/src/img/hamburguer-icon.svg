@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 24" width="34" height="24">
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #d6ab7f } 
+	</style>
+	<g id="Pasta 1">
+		<path id="Retângulo 83" class="shp0" d="M2 0L32 0C33.11 0 34 0.89 34 2L34 2C34 3.11 33.11 4 32 4L2 4C0.89 4 0 3.11 0 2L0 2C0 0.89 0.89 0 2 0Z" />
+		<path id="Retângulo 84" class="shp0" d="M2 10L32 10C33.11 10 34 10.89 34 12L34 12C34 13.11 33.11 14 32 14L2 14C0.89 14 0 13.11 0 12L0 12C0 10.89 0.89 10 2 10Z" />
+		<path id="Retângulo 85" class="shp0" d="M2 20L32 20C33.11 20 34 20.89 34 22L34 22C34 23.11 33.11 24 32 24L2 24C0.89 24 0 23.11 0 22L0 22C0 20.89 0.89 20 2 20Z" />
+	</g>
+</svg>

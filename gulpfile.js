@@ -4,7 +4,6 @@ var gulp = require('gulp'),
 	concat = require('gulp-concat'),
 	uglify = require('gulp-uglify'),
    imagemin = require('gulp-imagemin'),
-   htmlmin = require('gulp-htmlmin'),
    gulpLiveServer = require('gulp-live-server'),
    jshint = require('gulp-jshint'),
    stylish = require('jshint-stylish');
@@ -124,7 +123,7 @@ gulp.task('watch', function() {
   gulp.watch('assets/src/sass/**/*.scss', ['sass']);
   gulp.watch('assets/src/js/**/*.js', ['js']);
   gulp.watch('assets/src/img/*', ['image']);
-  gulp.watch('_html/*.html', ['htmlmin']);
+  gulp.watch('_html/*.html', ['html']);
 });
 
 // Serve Task

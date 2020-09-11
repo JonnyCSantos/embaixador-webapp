@@ -1,0 +1,165 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  .left {
+    width: 60%;
+    figure {
+      margin: 0;
+      img {
+        max-width: 100%;
+        &.mobile {
+          display: none;
+        }
+      }
+    }
+    p {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      color: #fff5ce;
+      margin: 0;
+    }
+    .actions {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 30px;
+      a, button {
+        display: block;
+        text-decoration: none;
+        color: #000;
+        width: 220px;
+        min-height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0;
+      }
+      #login-deezer {
+        background-image: url('../img/bg-deezer-button.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+      #login-spotify {
+        background-image: url('../img/bg-button-spotify.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+    }
+  }
+  .right {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    img {
+      max-width: 100%;
+    }
+    iframe {
+      &.unit-mobile {
+        display: none;
+      }
+    }
+  }
+}
+
+.login {
+  background-image: url('../img/bg-painel-completo.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  padding: 0 60px;
+  height: 300px;
+  max-height: 300px;
+  display: flex;
+  align-items: center;
+}
+
+
+@media(max-width: 1100px) {
+  .wrapper {
+    .left {
+      .login {
+        p {
+          line-height: 1.2rem;
+        }
+        .actions {
+          margin-top: 10px;
+        }
+      }
+    }
+    
+  }
+}
+
+@media(max-width: 991px) {
+  .container {
+    width: 100%;
+    padding: 0 15px;
+  }
+  .wrapper {
+    
+    .left {
+      figure {
+        display: flex;
+        justify-content: center;
+        img {
+          max-width: 100%;
+          margin: 0 auto;
+          &.web {
+            display: none;
+          }&.mobile {
+            display: block;
+          }
+        }
+      }
+      .login {
+        background: initial;
+        height: initial;
+        max-height: initial;
+        padding: 0;
+        p {
+          line-height: 1.5rem;
+          margin-top: 20px;
+        }
+        .actions {
+          margin-top: 30px;
+          flex-wrap: wrap;
+          a, button {
+            width: 100%;
+          }
+          #login-deezer {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+    
+  }
+}
+
+@media(max-width: 720px) {
+  .wrapper {
+    flex-wrap: wrap;
+    .left {
+      width: 100%;
+      .login {
+      
+      }
+    }
+    .right {
+      width: 100%;
+      margin-top: 30px;
+      iframe {
+        &.unit-web {
+          display: none;
+        }
+        &.unit-mobile {
+          display: block;
+        }
+      }
+    }
+    
+  }
+  
+}

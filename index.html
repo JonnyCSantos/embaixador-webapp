@@ -2,21 +2,44 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Gulp</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Embaixador Web</title>
+	
+	<link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+
 	<link rel="stylesheet" href="assets/css/style.min.css">
 </head>
-<body>
-	<header>
-		<div class="nav">
-			<h1 id="logo"></h1>
-			<p id="logoDesc"></p>
-		</div>
-	</header>
-	<main>
-		<section>
-			<h1 id="video" align="center"></h1>
-		</section>
-	</main>
+<body class="main-bg">
+	<div class="web-app">
+		<header>
+			<nav class="navigation"></nav>
+		</header>
+		<main class="container">
+			<div class="wrapper">
+				<section class="left">
+					<figure>
+						<img src="/assets/img/logo-web.png" alt="Logo Embaixador" class="web">
+						<img src="/assets/img/logo-mobile.png" alt="Logo Embaixador" class="mobile">
+					</figure>
+					<div class="login">
+						<div class="login__wrapper">
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+							<div class="actions">
+								<a href="./missao.html" id="login-deezer">deezer</a>
+								<a href="./missao.html" id="login-spotify">spotify</a>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="right">
+					<!-- <img src="../assets/img/gusttavo-boneco.png" alt="Boneco Embaixador"> -->
+					<iframe src="https://guilhermeouriques.github.io/projectgus/" frameborder="0" width="450" height="800"></iframe>
+				</section>
+			</div>
+		</main>
+	</div>
 </body>
 
 <script src="assets/js/script.min.js"></script>
